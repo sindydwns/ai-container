@@ -7,6 +7,13 @@ services:
     ports:
       - 3000:7860
 
+  openvoice:
+    build: openvoice
+    volumes:
+      - ./openvoice:/app
+    ports:
+      - 8001:8000
+
   fastapi:
     build: fastapi
     volumes:
